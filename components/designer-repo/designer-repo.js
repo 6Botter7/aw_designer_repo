@@ -10,21 +10,21 @@ export class DesignerRepo extends crsbinding.classes.BindableElement{
     }
 
     loadHTML () {
-        const status = this.getProperty ("displayStatus");
+        const status = this.getProperty("displayStatus");
         const file = `/templates/designer-repo/${this.dataset.repo}-${status}.html`;
     }
 
        
 
-    // connectedCallback() {
-    //     await super.connectedCallback();
+    async connectedCallback() {
+        await super.connectedCallback();
 
-    // }
+    }
 
-    // disconnectedCallback () {
+    async disconnectedCallback () {
 
-    //     await super.disconnectedCallback();
-    // }
+        await super.disconnectedCallback();
+    }
 }
 
 customElements.define("designer-repo", DesignerRepo);
